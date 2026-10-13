@@ -48,11 +48,61 @@ A identidade visual foi pensada para balancear a estética descontraída do pato
 
 ## 🔗 Links e Recursos (Em Construção 🚧)
 
-- **Protótipo no Figma:** `[Em desenvolvimento - link será inserido aqui]`
-- **Documentação de Telas e Regras:** `[Em construção]`
-- **Demonstração em Vídeo / Prints:** `[Será adicionado na fase final]`
+- **Protótipo no Figma:** `https://www.figma.com/design/gskBOD62MB2aTbkYGoTmRV/QuackDev?node-id=0-1&t=ppU0HXiPibQIFOiN-1`
+- **Demonstração em Vídeo:** `https://drive.google.com/file/d/1Vaw-nToEneJbXxqF8cDzNHOt_vHaNSg0/view?usp=drive_link`
+
+---
+
+## Tecnologias
+- Expo e React Native
+- React Navigation
+- React Native Gesture Handler
+- React Native Reanimated
+- Expo Image Picker
+- AsyncStorage
+- Expo Blur
+
+## Como executar
+1. Instale Node.js LTS e o aplicativo Expo Go no celular.
+2. Descompacte o projeto e abra a pasta no terminal.
+3. Execute `npm install`.
+4. Execute `npx expo start`.
+5. Leia o QR code com o Expo Go. Para testar a câmera, use um dispositivo físico.
+
+## Funcionalidades implementadas
+### Deck de Seleção
+- Arrastar para a direita aprova o candidato.
+- Arrastar para a esquerda descarta o candidato.
+- Arrastar para cima abre os detalhes.
+- Toque simples abre a gaveta com bio e tecnologias.
+- Dois toques marcam o candidato como prioridade.
+- Pinça na foto permite ampliar durante o gesto.
+- Botões também estão disponíveis para aprovar, descartar e priorizar.
+
+### Painel do Gerente
+- Lista construída com `FlatList`.
+- Candidatos prioritários aparecem primeiro.
+- Exibe situação de cada candidato.
+- Permite editar, excluir e alterar a prioridade.
+- Atalho para cadastrar novos candidatos.
+
+### Cadastro e recurso nativo
+- CRUD de candidatos: criar, consultar, atualizar e excluir.
+- Campos: nome completo, idade, foto e tecnologias; também bio, pretensão salarial e análise.
+- Foto pela câmera ou pela galeria, com pedido de permissão.
+- Dados ficam salvos no dispositivo com AsyncStorage.
+
+### Freemium
+- Plano Free: swipes sem limite e até três aprovações por sessão.
+- Ao atingir o limite, aparece a modal do PRO.
+- Plano PRO de demonstração: libera aprovações sem limite, desfazer o último swipe e visualização da pretensão salarial/análise.
+- A ação de desfazer swipe aparece no Painel do Gerente.
+- A ativação do PRO é local e demonstrativa; não existe pagamento.
+
+## Gestos e animações
+Os gestos são implementados com React Native Gesture Handler. A posição do card e o zoom são controlados por Reanimated, que executa as atualizações animadas na UI thread. O gesto de arrastar usa limiares horizontais para decidir entre aprovação e descarte.
 
 ---
 
 ## 🛠️ Status do Projeto
-> 🚧 **Projeto em fase inicial de estruturação e prototipagem.** Novas seções, prints de execução e instruções detalhadas de setup serão adicionadas conforme o avanço das entregas de cada sprint da equipe.
+> 🚧 **Projeto em fase final para avaliação de estruturação e prototipagem.** 
